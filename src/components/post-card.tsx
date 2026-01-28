@@ -5,17 +5,6 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import type { Post } from '@/lib/definitions';
 import { Calendar, User } from 'lucide-react';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from '@/components/ui/alert-dialog';
 import { Button } from '@/components/ui/button';
 
 type PostCardProps = {
@@ -46,25 +35,9 @@ export function PostCard({ post }: PostCardProps) {
             </h2>
             <p className="text-muted-foreground text-sm line-clamp-2">{post.content}</p>
             <div className="pt-2">
-              <AlertDialog>
-                <AlertDialogTrigger asChild>
-                  <Button>Show prompt</Button>
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                  <AlertDialogHeader>
-                    <AlertDialogTitle>{post.title}</AlertDialogTitle>
-                    <AlertDialogDescription>
-                      {post.content}
-                    </AlertDialogDescription>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel>Close</AlertDialogCancel>
-                    <AlertDialogAction asChild>
-                      <Link href={`/posts/${post.id}`}>View Post</Link>
-                    </AlertDialogAction>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
+              <Link href={`/posts/${post.id}`} asChild>
+                <Button>Show prompt</Button>
+              </Link>
             </div>
             <div className="flex items-center text-xs text-muted-foreground pt-2 space-x-4">
               <div className="flex items-center gap-1">
