@@ -41,7 +41,7 @@ export function PostCard({ post }: PostCardProps) {
             <div className="flex items-center text-xs text-muted-foreground pt-2 justify-center">
               <div className="flex items-center gap-1">
                 <User className="w-3 h-3" />
-                <span>By PROMPT AIOM</span>
+                <span>By AIOM</span>
               </div>
             </div>
           </div>
