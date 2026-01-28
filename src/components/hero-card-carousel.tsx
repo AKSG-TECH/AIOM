@@ -33,7 +33,7 @@ export function HeroCardCarousel({ posts }: HeroCardCarouselProps) {
           <CarouselItem key={post.id}>
             <Card className="overflow-hidden border-none shadow-2xl rounded-xl">
               <CardContent className="p-0 relative">
-                <div className="relative aspect-[2/3] w-full">
+                <div className="relative aspect-[9/16] w-full">
                   <Image
                     src={post.imageUrl}
                     alt={post.title}

@@ -14,18 +14,18 @@ export function PostCard({ post }: PostCardProps) {
   return (
     <Card className="overflow-hidden shadow-lg rounded-xl transition-shadow hover:shadow-2xl">
       <CardContent className="p-0">
-        <div className="grid grid-cols-1 sm:grid-cols-3">
-          <div className="sm:col-span-1 relative aspect-video sm:aspect-[4/3]">
+        <div className="flex flex-col">
+          <div className="relative aspect-[9/16] w-full">
             <Image
-              src={post.imageUrl.replace('/400/600', '/600/450')}
+              src={post.imageUrl}
               alt={post.title}
               fill
               className="object-cover"
               data-ai-hint={post.imageHint}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
-          <div className="sm:col-span-2 p-6 flex flex-col justify-center space-y-3">
+          <div className="p-6 flex flex-col space-y-3">
             <Badge variant="secondary" className="font-semibold uppercase w-fit">{post.category}</Badge>
             <h2 className="font-headline text-xl md:text-2xl font-bold leading-tight">
               <Link href={`/posts/${post.id}`} className="hover:text-primary transition-colors">

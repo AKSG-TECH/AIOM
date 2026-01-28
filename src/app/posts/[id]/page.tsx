@@ -26,9 +26,9 @@ export default function PostPage({ params }: { params: { id: string } }) {
             </h1>
             <p className="text-muted-foreground text-lg">{post.date}</p>
           </div>
-          <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+          <div className="relative aspect-[9/16] w-full overflow-hidden rounded-lg">
             <Image
-              src={post.imageUrl.replace('/400/600', '/1200/675')}
+              src={post.imageUrl}
               alt={post.title}
               fill
               className="object-cover"
