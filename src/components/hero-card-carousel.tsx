@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeftCircle, ArrowRightCircle } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -56,19 +56,17 @@ export function HeroCardCarousel({ posts }: HeroCardCarouselProps) {
                   </Link>
                 </div>
 
-                <div className="absolute inset-x-0 bottom-1/2 translate-y-1/2 flex items-center justify-between px-4">
-                  <CarouselPrevious className="h-10 w-10 text-white bg-black/20 hover:bg-black/40 border-none transition-colors">
-                    <ArrowLeftCircle className="h-8 w-8" />
-                  </CarouselPrevious>
-                  <CarouselNext className="h-10 w-10 text-white bg-black/20 hover:bg-black/40 border-none transition-colors">
-                    <ArrowRightCircle className="h-8 w-8" />
-                  </CarouselNext>
-                </div>
               </CardContent>
             </Card>
           </CarouselItem>
         ))}
       </CarouselContent>
+      <CarouselPrevious className="h-10 w-10 text-white bg-black/20 hover:bg-black/40 border-none transition-colors -left-4">
+        <ArrowLeft className="h-6 w-6" />
+      </CarouselPrevious>
+      <CarouselNext className="h-10 w-10 text-white bg-black/20 hover:bg-black/40 border-none transition-colors -right-4">
+        <ArrowRight className="h-6 w-6" />
+      </CarouselNext>
     </Carousel>
   );
 }
