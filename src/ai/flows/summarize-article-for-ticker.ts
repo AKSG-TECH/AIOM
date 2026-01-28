@@ -1,4 +1,4 @@
-'use server';
+
 /**
  * @fileOverview A flow to summarize a blog post for display in a news ticker.
  *
