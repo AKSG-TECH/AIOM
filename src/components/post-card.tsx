@@ -32,8 +32,8 @@ export function PostCard({ post }: PostCardProps) {
                 {post.title}
               </Link>
             </h2>
-            <div>
-              <Button asChild>
+            <div className="w-full">
+              <Button asChild className="w-full">
                 <Link href={`/posts/${post.id}`}>Show prompt</Link>
               </Button>
             </div>
