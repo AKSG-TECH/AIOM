@@ -1,16 +1,38 @@
+'use client';
 
 import { posts } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
+import { Button } from '@/components/ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import { useToast } from "@/hooks/use-toast";
+import { Copy } from 'lucide-react';
+import { Textarea } from '@/components/ui/textarea';
 
 export default function PostPage({ params }: { params: { id: string } }) {
   const post = posts.find((p) => p.id === params.id);
+  const { toast } = useToast();
 
   if (!post) {
     notFound();
   }
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(post.content);
+    toast({
+      title: "copy",
+    });
+  };
 
   return (
     <>
@@ -34,6 +56,37 @@ export default function PostPage({ params }: { params: { id: string } }) {
               data-ai-hint={post.imageHint}
             />
           </div>
+
+          <div className="text-center">
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button>Show prompt</Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-2xl">
+                <DialogHeader>
+                  <DialogTitle>Prompt</DialogTitle>
+                  <DialogDescription>
+                    sawagat hai aapka hamre prompt ke ish website pe
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="my-4">
+                  <Textarea
+                    readOnly
+                    value={post.content}
+                    rows={8}
+                    className="bg-muted resize-none"
+                  />
+                </div>
+                <DialogFooter>
+                  <Button onClick={handleCopy}>
+                    <Copy className="mr-2 h-4 w-4" />
+                    Copy
+                  </Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+          </div>
+
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p>{post.content}</p>
             <p>
