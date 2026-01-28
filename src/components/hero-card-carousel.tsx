@@ -48,7 +48,7 @@ export function HeroCardCarousel({ posts }: HeroCardCarouselProps) {
                   <Badge variant="secondary" className="font-semibold uppercase">
                     {post.category}
                   </Badge>
-                  <h2 className="font-headline text-xl font-bold leading-tight text-primary-foreground">
+                  <h2 className="font-headline text-xs font-bold leading-tight text-primary-foreground">
                     {post.title}
                   </h2>
                   <Link href={`/posts/${post.id}`} className="inline-block font-semibold text-primary-foreground/80 hover:text-primary-foreground transition-colors">

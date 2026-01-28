@@ -28,8 +28,8 @@ export function PostCard({ post }: PostCardProps) {
           </div>
           <div className="p-6 flex flex-col space-y-3">
             <Badge variant="secondary" className="font-semibold uppercase w-fit">{post.category}</Badge>
-            <h2 className="font-headline text-base font-bold leading-tight">
-              <Link href={`/posts/${post.id}`} className="hover:text-primary transition-colors">
+            <h2 className="font-headline font-bold leading-tight">
+              <Link href={`/posts/${post.id}`} className="hover:text-primary transition-colors text-xs">
                 {post.title}
               </Link>
             </h2>
