@@ -54,13 +54,21 @@ export function BlogSidebar() {
         </CardHeader>
         <CardContent>
           <ul className="space-y-2">
-            {categories.map(category => (
-              <li key={category}>
-                <Link href="#" className="hover:text-primary capitalize">
-                  {category.toLowerCase()}
-                </Link>
-              </li>
-            ))}
+            {categories.map(category => {
+              let href = '#';
+              if (category === 'BOYS') {
+                href = '/boys';
+              } else if (category === 'GIRLS') {
+                href = '/girls';
+              }
+              return (
+                <li key={category}>
+                  <Link href={href} className="hover:text-primary capitalize">
+                    {category.toLowerCase()}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </CardContent>
       </Card>
