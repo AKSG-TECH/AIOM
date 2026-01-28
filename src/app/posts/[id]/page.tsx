@@ -1,7 +1,7 @@
 'use client';
 
 import { posts } from '@/lib/data';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
@@ -19,7 +19,8 @@ import { useToast } from "@/hooks/use-toast";
 import { Copy } from 'lucide-react';
 import { Textarea } from '@/components/ui/textarea';
 
-export default function PostPage({ params }: { params: { id: string } }) {
+export default function PostPage() {
+  const params = useParams<{ id: string }>();
   const post = posts.find((p) => p.id === params.id);
   const { toast } = useToast();
 
