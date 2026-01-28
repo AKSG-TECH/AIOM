@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'MY AI News',
+  title: 'PROMPT AIOM',
   description: 'The latest in AI news and creativity.',
 };
 

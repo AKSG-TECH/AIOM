@@ -25,7 +25,7 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold uppercase font-headline text-lg">MY AI</span>
+            <span className="font-bold uppercase font-headline text-lg">PROMPT AIOM</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navLinks.map(link => (
@@ -38,7 +38,7 @@ export function Header() {
 
         <div className="md:hidden flex-1">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold uppercase font-headline text-lg">MY AI</span>
+            <span className="font-bold uppercase font-headline text-lg">PROMPT AIOM</span>
           </Link>
         </div>
         
