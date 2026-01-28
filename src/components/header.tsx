@@ -2,7 +2,7 @@
 import { Menu, Facebook, Twitter, Send, Instagram, Youtube, Search } from 'lucide-react';
 import { DarkModeToggle } from '@/components/dark-mode-toggle';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import Link from 'next/link';
 
 export function Header() {
@@ -72,9 +72,11 @@ export function Header() {
                 </SheetHeader>
                 <div className="grid gap-4 py-4">
                   {navLinks.map(link => (
-                     <Link key={link.href} href={link.href} className="flex items-center space-x-2 p-2">
-                       {link.label}
-                     </Link>
+                     <SheetClose asChild key={link.href}>
+                       <Link href={link.href} className="flex items-center space-x-2 p-2 rounded-md hover:bg-accent transition-colors">
+                         {link.label}
+                       </Link>
+                     </SheetClose>
                   ))}
                   <div className="flex justify-center space-x-4 pt-4">
                     {socialLinks.map((link, index) => (
