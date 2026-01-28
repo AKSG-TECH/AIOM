@@ -25,9 +25,9 @@ export function PostCard({ post }: PostCardProps) {
               data-ai-hint={post.imageHint}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
+            <Badge variant="secondary" className="absolute top-2 right-2 z-10 font-semibold uppercase">{post.category}</Badge>
           </div>
           <div className="p-6 flex flex-col space-y-3">
-            <Badge variant="secondary" className="font-semibold uppercase w-fit">{post.category}</Badge>
             <h2 className="font-headline font-bold leading-tight">
               <Link href={`/posts/${post.id}`} className="hover:text-primary transition-colors text-xs">
                 {post.title}
