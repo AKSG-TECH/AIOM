@@ -15,17 +15,19 @@ export function PostCard({ post }: PostCardProps) {
     <Card className="overflow-hidden shadow-lg rounded-xl transition-shadow hover:shadow-2xl">
       <CardContent className="p-0">
         <div className="flex flex-col">
-          <div className="relative aspect-[9/16] w-full">
-            <Image
-              src={post.imageUrl}
-              alt={post.title}
-              fill
-              className="object-cover"
-              data-ai-hint={post.imageHint}
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <Badge variant="secondary" className="absolute top-2 right-2 z-10 font-semibold uppercase">{post.category}</Badge>
-          </div>
+          <Link href={`/posts/${post.id}`}>
+            <div className="relative aspect-[9/16] w-full">
+              <Image
+                src={post.imageUrl}
+                alt={post.title}
+                fill
+                className="object-cover"
+                data-ai-hint={post.imageHint}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <Badge variant="secondary" className="absolute top-2 right-2 z-10 font-semibold uppercase">{post.category}</Badge>
+            </div>
+          </Link>
           <div className="p-[7px] flex flex-col space-y-[7px] items-center">
             <h2 className="font-headline font-bold leading-tight w-full text-left">
               <Link href={`/posts/${post.id}`} className="hover:text-primary transition-colors text-xs">
