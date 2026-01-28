@@ -7,7 +7,6 @@ import Link from 'next/link';
 
 export function BlogSidebar() {
   const categories = [...new Set(posts.map(p => p.category))];
-  const archives = [...new Set(posts.map(p => new Date(p.date).toLocaleString('default', { month: 'long', year: 'numeric' })))];
 
   return (
     <div className="space-y-8">
@@ -46,23 +45,6 @@ export function BlogSidebar() {
         </CardHeader>
         <CardContent>
           <p>No comments to show.</p>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Archives</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul className="space-y-2">
-            {archives.map(archive => (
-              <li key={archive}>
-                <Link href="#" className="hover:text-primary">
-                  {archive}
-                </Link>
-              </li>
-            ))}
-          </ul>
         </CardContent>
       </Card>
 

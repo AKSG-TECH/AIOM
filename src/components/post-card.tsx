@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import type { Post } from '@/lib/definitions';
-import { Calendar, User } from 'lucide-react';
+import { User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type PostCardProps = {
@@ -39,11 +39,7 @@ export function PostCard({ post }: PostCardProps) {
                 <Link href={`/posts/${post.id}`}>Show prompt</Link>
               </Button>
             </div>
-            <div className="flex items-center text-xs text-muted-foreground pt-2 space-x-4">
-              <div className="flex items-center gap-1">
-                <Calendar className="w-3 h-3" />
-                <span>{post.date}</span>
-              </div>
+            <div className="flex items-center text-xs text-muted-foreground pt-2">
               <div className="flex items-center gap-1">
                 <User className="w-3 h-3" />
                 <span>By MY AI</span>

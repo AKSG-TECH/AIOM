@@ -10,15 +10,14 @@ import { cn } from '@/lib/utils';
 export function NewsTicker({ posts }: { posts: Post[] }) {
   const [isPaused, setIsPaused] = useState(false);
 
-  const TickerItem = ({ title, date }: { title: string; date: string }) => (
+  const TickerItem = ({ title }: { title: string }) => (
     <div className="flex items-center space-x-4 flex-shrink-0 px-4">
       <span className="font-medium text-xs text-foreground/80">{title}</span>
-      <span className="text-xs text-muted-foreground">{date}</span>
     </div>
   );
 
   const tickerContent = posts.map((post) => (
-    <TickerItem key={post.id} title={post.title} date={post.date} />
+    <TickerItem key={post.id} title={post.title} />
   ));
 
   return (

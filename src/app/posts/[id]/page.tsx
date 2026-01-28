@@ -24,7 +24,6 @@ export default function PostPage({ params }: { params: { id: string } }) {
             <h1 className="text-xl md:text-2xl font-headline font-extrabold tracking-tight">
               {post.title}
             </h1>
-            <p className="text-muted-foreground text-lg">{post.date}</p>
           </div>
           <div className="relative aspect-[9/16] w-full overflow-hidden rounded-lg">
             <Image

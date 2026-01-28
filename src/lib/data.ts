@@ -13,7 +13,6 @@ export const posts: Post[] = [
     category: "CREATIVE",
     imageUrl: postImage1?.imageUrl || 'https://picsum.photos/seed/aiwinter/400/600',
     imageHint: postImage1?.imageHint || 'winter portrait',
-    date: 'January 27, 2026',
     content: 'An in-depth look at creating stunningly realistic portraits with AI, focusing on winter aesthetics and cultural representation.',
   },
   {
@@ -22,7 +21,6 @@ export const posts: Post[] = [
     category: 'TRAVEL',
     imageUrl: postImage2?.imageUrl || 'https://picsum.photos/seed/aisummer/400/600',
     imageHint: postImage2?.imageHint || 'summer landscape',
-    date: 'February 15, 2026',
     content: 'Discover the breathtaking beauty of the Alpine summer, captured with advanced AI-powered photography techniques.',
   },
   {
@@ -31,7 +29,6 @@ export const posts: Post[] = [
     category: 'FUTURISM',
     imageUrl: postImage3?.imageUrl || 'https://picsum.photos/seed/aicyberpunk/400/600',
     imageHint: postImage3?.imageHint || 'city street',
-    date: 'March 03, 2026',
     content: 'A visual exploration of a cyberpunk city, with AI generating intricate details of a high-tech, dystopian future.',
   },
 ];

@@ -5,6 +5,5 @@ export type Post = {
   category: string;
   imageUrl: string;
   imageHint: string;
-  date: string;
   content: string;
 };
