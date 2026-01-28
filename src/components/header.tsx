@@ -10,6 +10,8 @@ export function Header() {
     { href: '/', label: 'HOME' },
     { href: '/boys', label: "BOY'S" },
     { href: '/girls', label: "GIRL'S" },
+    { href: '/privacy-policy', label: 'PRIVACY POLICY' },
+    { href: '/contact-us', label: 'CONTACT US' },
   ];
 
   const socialLinks = [
