@@ -8,8 +8,8 @@ import Link from 'next/link';
 export function Header() {
   const navLinks = [
     { href: '/', label: 'HOME' },
-    { href: '/boys', label: "BOYS" },
-    { href: '/girls', label: "GIRLS" },
+    { href: '/category/boys', label: "BOYS" },
+    { href: '/category/girls', label: "GIRLS" },
     { href: '/privacy-policy', label: 'PRIVACY POLICY' },
     { href: '/contact-us', label: 'CONTACT US' },
   ];
