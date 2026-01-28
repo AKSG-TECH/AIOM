@@ -9,9 +9,9 @@ export default function Home() {
     <>
       <NewsTicker posts={posts} />
       <div className="container mx-auto py-10 px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
-            <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+          <div className="lg:col-span-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {posts.map((post) => (
                 <PostCard key={post.id} post={post} />
               ))}
