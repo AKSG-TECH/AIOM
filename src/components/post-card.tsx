@@ -35,9 +35,9 @@ export function PostCard({ post }: PostCardProps) {
             </h2>
             <p className="text-muted-foreground text-sm line-clamp-2">{post.content}</p>
             <div className="pt-2">
-              <Link href={`/posts/${post.id}`} asChild>
-                <Button>Show prompt</Button>
-              </Link>
+              <Button asChild>
+                <Link href={`/posts/${post.id}`}>Show prompt</Link>
+              </Button>
             </div>
             <div className="flex items-center text-xs text-muted-foreground pt-2 space-x-4">
               <div className="flex items-center gap-1">
