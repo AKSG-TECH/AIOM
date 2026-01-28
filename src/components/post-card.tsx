@@ -33,7 +33,6 @@ export function PostCard({ post }: PostCardProps) {
                 {post.title}
               </Link>
             </h2>
-            <p className="text-muted-foreground text-sm line-clamp-2">{post.content}</p>
             <div className="pt-2">
               <Button asChild>
                 <Link href={`/posts/${post.id}`}>Show prompt</Link>
