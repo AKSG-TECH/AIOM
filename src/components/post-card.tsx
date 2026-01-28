@@ -26,18 +26,18 @@ export function PostCard({ post }: PostCardProps) {
             />
             <Badge variant="secondary" className="absolute top-2 right-2 z-10 font-semibold uppercase">{post.category}</Badge>
           </div>
-          <div className="p-6 flex flex-col space-y-3 items-center">
+          <div className="p-[5px] flex flex-col space-y-[5px] items-center">
             <h2 className="font-headline font-bold leading-tight w-full text-left">
               <Link href={`/posts/${post.id}`} className="hover:text-primary transition-colors text-xs">
                 {post.title}
               </Link>
             </h2>
-            <div className="pt-2">
+            <div>
               <Button asChild>
                 <Link href={`/posts/${post.id}`}>Show prompt</Link>
               </Button>
             </div>
-            <div className="flex items-center text-xs text-muted-foreground pt-2 justify-center">
+            <div className="flex items-center text-xs text-muted-foreground justify-center">
               <div className="flex items-center gap-1">
                 <User className="w-3 h-3" />
                 <span>By AIOM</span>
