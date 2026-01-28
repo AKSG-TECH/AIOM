@@ -38,10 +38,10 @@ export function PostCard({ post }: PostCardProps) {
               </Button>
             </div>
             <div className="flex items-center text-xs text-muted-foreground justify-center">
-              <div className="flex items-center gap-1">
+              <Link href="/contact-us" className="flex items-center gap-1 hover:text-primary transition-colors">
                 <User className="w-3 h-3" />
                 <span>By AIOM</span>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
