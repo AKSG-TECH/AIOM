@@ -28,11 +28,11 @@ export function Header() {
         
         <div className="flex flex-1 items-center justify-start">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold uppercase font-headline text-lg">PROMPT AIOM</span>
+            <span className="font-bold uppercase font-headline text-lg whitespace-nowrap">PROMPT AIOM</span>
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden md:flex flex-1 items-center justify-center space-x-6 text-sm font-medium">
           {navLinks.map(link => (
             <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground/80 text-foreground/60">
               {link.label}
