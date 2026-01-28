@@ -12,7 +12,7 @@ export function NewsTicker({ posts }: { posts: Post[] }) {
 
   const TickerItem = ({ title, date }: { title: string; date: string }) => (
     <div className="flex items-center space-x-4 flex-shrink-0 px-4">
-      <span className="font-medium text-sm text-foreground/80">{title}</span>
+      <span className="font-medium text-xs text-foreground/80">{title}</span>
       <span className="text-xs text-muted-foreground">{date}</span>
     </div>
   );

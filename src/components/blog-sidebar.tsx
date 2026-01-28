@@ -31,7 +31,7 @@ export function BlogSidebar() {
           <ul className="space-y-4">
             {posts.slice(0, 5).map(post => (
               <li key={post.id}>
-                <Link href={`/posts/${post.id}`} className="hover:text-primary font-medium">
+                <Link href={`/posts/${post.id}`} className="hover:text-primary font-medium text-sm">
                   {post.title}
                 </Link>
               </li>

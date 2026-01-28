@@ -21,7 +21,7 @@ export default function PostPage({ params }: { params: { id: string } }) {
             <Badge variant="secondary" className="font-semibold uppercase">
               {post.category}
             </Badge>
-            <h1 className="text-3xl md:text-4xl font-headline font-extrabold tracking-tight">
+            <h1 className="text-xl md:text-2xl font-headline font-extrabold tracking-tight">
               {post.title}
             </h1>
             <p className="text-muted-foreground text-lg">{post.date}</p>
