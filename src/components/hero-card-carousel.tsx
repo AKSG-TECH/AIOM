@@ -1,0 +1,74 @@
+
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowLeftCircle, ArrowRightCircle } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import type { Post } from '@/lib/definitions';
+
+type HeroCardCarouselProps = {
+  posts: Post[];
+};
+
+export function HeroCardCarousel({ posts }: HeroCardCarouselProps) {
+  return (
+    <Carousel
+      opts={{
+        align: 'start',
+        loop: true,
+      }}
+      className="w-full max-w-sm mx-auto"
+    >
+      <CarouselContent>
+        {posts.map((post) => (
+          <CarouselItem key={post.id}>
+            <Card className="overflow-hidden border-none shadow-2xl rounded-xl">
+              <CardContent className="p-0 relative">
+                <div className="relative aspect-[2/3] w-full">
+                  <Image
+                    src={post.imageUrl}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={post.imageHint}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent space-y-3">
+                  <Badge variant="secondary" className="font-semibold uppercase">
+                    {post.category}
+                  </Badge>
+                  <h2 className="font-headline text-2xl font-bold leading-tight text-primary-foreground">
+                    {post.title}
+                  </h2>
+                  <Link href={`/posts/${post.id}`} className="inline-block font-semibold text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                    Continue Reading &gt;
+                  </Link>
+                </div>
+
+                <div className="absolute inset-x-0 bottom-1/2 translate-y-1/2 flex items-center justify-between px-4">
+                  <CarouselPrevious className="h-10 w-10 text-white bg-black/20 hover:bg-black/40 border-none transition-colors">
+                    <ArrowLeftCircle className="h-8 w-8" />
+                  </CarouselPrevious>
+                  <CarouselNext className="h-10 w-10 text-white bg-black/20 hover:bg-black/40 border-none transition-colors">
+                    <ArrowRightCircle className="h-8 w-8" />
+                  </CarouselNext>
+                </div>
+              </CardContent>
+            </Card>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
+  );
+}

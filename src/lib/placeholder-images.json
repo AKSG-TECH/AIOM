@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "post-1",
+      "description": "A creative winter portrait of a young man.",
+      "imageUrl": "https://images.unsplash.com/photo-1764773967148-7eb641ed7b12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3aW50ZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk1OTk3MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "winter portrait"
+    },
+    {
+      "id": "post-2",
+      "description": "A scenic view of summer meadows in the mountains.",
+      "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdW1tZXIlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzY5NTk5NzMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "summer landscape"
+    },
+    {
+      "id": "post-3",
+      "description": "A neon-lit street in a futuristic city.",
+      "imageUrl": "https://images.unsplash.com/photo-1617121346253-43ef95179ac9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc3RyZWV0fGVufDB8fHx8MTc2OTUwMDk2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city street"
+    }
+  ]
 }
