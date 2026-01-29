@@ -11,6 +11,7 @@ const postImage6 = PlaceHolderImages.find(p => p.id === 'post-6');
 const postImage7 = PlaceHolderImages.find(p => p.id === 'post-7');
 const postImage8 = PlaceHolderImages.find(p => p.id === 'post-8');
 const postImage9 = PlaceHolderImages.find(p => p.id === 'post-9');
+const postImage10 = PlaceHolderImages.find(p => p.id === 'post-10');
 
 export const posts: Post[] = [
   {
@@ -84,5 +85,13 @@ export const posts: Post[] = [
     imageUrl: postImage9?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtyk91Ds32sH75Rnc3rAhCAdyXQ9h8Vv_CmguDxC8uU76DUo00DUZfGZE9VCkkJlYyQQZWZrWtbuBu7A2qitqAcV1Pye_BBGouGNHOaYycXXusVL-b33Rqjpdt81lrmH7E9ZM37SlP8ICOwYMS-KeLvQ1kv69Kq3mq64odE529ZKAPvYj8MJXUdxEka7Zi/s1376/1000376785.jpg',
     imageHint: postImage9?.imageHint || 'boy posing suit',
     content: 'A prompt to generate an image of a stylish young boy posing in a suit, showcasing a cool and confident attitude.',
+  },
+  {
+    id: '10',
+    title: 'Stylish Man in Black Leaning on Wall',
+    category: 'BOYS',
+    imageUrl: postImage10?.imageUrl || 'https://storage.googleapis.com/res-blockcraft/image/622543c4-42b2-4d51-872f-53c0765c9247.jpg',
+    imageHint: postImage10?.imageHint || 'man posing',
+    content: 'Generate an image of a confident man in a black outfit, casually leaning against an ancient, carved stone wall covered in ivy.',
   }
 ];

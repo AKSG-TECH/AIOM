@@ -53,6 +53,12 @@
       "description": "A stylish young boy posing in a suit.",
       "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtyk91Ds32sH75Rnc3rAhCAdyXQ9h8Vv_CmguDxC8uU76DUo00DUZfGZE9VCkkJlYyQQZWZrWtbuBu7A2qitqAcV1Pye_BBGouGNHOaYycXXusVL-b33Rqjpdt81lrmH7E9ZM37SlP8ICOwYMS-KeLvQ1kv69Kq3mq64odE529ZKAPvYj8MJXUdxEka7Zi/s1376/1000376785.jpg",
       "imageHint": "boy posing suit"
+    },
+    {
+      "id": "post-10",
+      "description": "Stylish man in black leaning against a stone wall.",
+      "imageUrl": "https://storage.googleapis.com/res-blockcraft/image/622543c4-42b2-4d51-872f-53c0765c9247.jpg",
+      "imageHint": "man posing"
     }
   ]
 }
