@@ -4,6 +4,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { posts } from '@/lib/data';
+import { StickyNav } from '@/components/sticky-nav';
 
 export const metadata: Metadata = {
   title: 'PROMPT AIOM',
@@ -26,9 +28,10 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">
             <Header />
-            <main className="flex-grow">{children}</main>
+            <main className="flex-grow pb-16 md:pb-0">{children}</main>
             <Footer />
           </div>
+          <StickyNav posts={posts} />
           <Toaster />
         </ThemeProvider>
       </body>
