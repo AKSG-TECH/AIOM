@@ -72,9 +72,8 @@ export const posts: Post[] = [
     id: '8',
     title: 'Stylish young boy posing',
     category: 'BOYS',
-    imageUrl: postImage8?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtyk91Ds32sH75Rnc3rAhCAdyXQ9h8Vv_CmguDxC8uU76DUo00DUZfGZE9VCkkJlYyQQZWZrWtbuBu7A2qitqAcV1Pye_BBGouGNHOaYycXXusVL-b33Rqjpdt81lrmH7E9ZM37SlP8ICOwYMS-KeLvQ1kv69Kq3mq64odE529ZKAPvYj8MJXUdxEka7Zi/s1376/1000376785.jpg',
+    imageUrl: postImage8?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGqQKU1KFWRRfkxYql8LI8Q5cqgVGWzDv33x-PGQP12ZQ4qBNm2o3ZMFTwA-Q4AxyCKrfNRSGOLpHkhoA4YJOYvje28l1QU1DNKIDzX2-GXnCWO_Gj5As5jEEOy5bxVML_z0dW97Rw-mvGvPSTzwKDFynXLkvT8X2O3AyzLzqY1y6BFLHQJqUGwuDGAqCS/s2752/1000376761.png',
     imageHint: postImage8?.imageHint || 'boy posing',
     content: 'A prompt to generate an image of a stylish young boy posing for a photo, showcasing a cool and confident attitude.',
   }
 ];
-
