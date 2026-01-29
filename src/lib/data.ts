@@ -84,7 +84,7 @@ export const posts: Post[] = [
     category: 'BOYS',
     imageUrl: postImage9?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtyk91Ds32sH75Rnc3rAhCAdyXQ9h8Vv_CmguDxC8uU76DUo00DUZfGZE9VCkkJlYyQQZWZrWtbuBu7A2qitqAcV1Pye_BBGouGNHOaYycXXusVL-b33Rqjpdt81lrmH7E9ZM37SlP8ICOwYMS-KeLvQ1kv69Kq3mq64odE529ZKAPvYj8MJXUdxEka7Zi/s1376/1000376785.jpg',
     imageHint: postImage9?.imageHint || 'boy posing suit',
-    content: 'A prompt to generate an image of a stylish young boy posing in a suit, showcasing a cool and confident attitude.',
+    content: 'Ultra-photorealistic giant statue based on the uploaded photo, keeping the face exactly the same without changes. The statue stands tall in the middle of a (place you want) roundabout near a famous landmark, under construction with scaffolding. Workers in yellow helmets and orange vests are climbing, welding, and building. Some areas remain exposed metal framework, while other sections are detailed and finished. Surroundings capture (Place you want) city: crowded streets with colorful rickshaws, buses, and cars circling the roundabout, vendors with tea stalls, fruit carts, and umbrellas, shop signs, big billboards, and messy hanging wires. Daytime sky with tropical trees, vibrant and lively atmosphere.',
   },
   {
     id: '10',
