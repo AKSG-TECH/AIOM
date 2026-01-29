@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
@@ -5,27 +7,37 @@ import { Card, CardContent } from '@/components/ui/card';
 import type { Post } from '@/lib/definitions';
 import { User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
+import { Skeleton } from './ui/skeleton';
+import { cn } from '@/lib/utils';
 
 type PostCardProps = {
   post: Post;
 };
 
 export function PostCard({ post }: PostCardProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <Card className="overflow-hidden shadow-lg rounded-xl transition-shadow hover:shadow-2xl">
       <CardContent className="p-0">
         <div className="flex flex-col">
-          <div className="relative aspect-[9/16] w-full">
+          <div className="relative aspect-[9/16] w-full bg-muted">
             <Link href={`/posts/${post.id}`}>
               <Image
                 src={post.imageUrl}
                 alt={post.title}
                 fill
-                className="object-cover"
+                className={cn(
+                  'object-cover transition-opacity duration-500',
+                  isLoaded ? 'opacity-100' : 'opacity-0'
+                )}
                 data-ai-hint={post.imageHint}
                 sizes="(max-width: 768px) 100vw, 50vw"
+                onLoad={() => setIsLoaded(true)}
               />
             </Link>
+            {!isLoaded && <Skeleton className="absolute inset-0 rounded-none" />}
             <Link href={`/category/${post.category.toLowerCase()}`} className="absolute top-2 right-2 z-10">
                 <Badge variant="secondary" className="font-semibold uppercase">{post.category}</Badge>
             </Link>

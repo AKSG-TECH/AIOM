@@ -14,10 +14,53 @@ import {
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import type { Post } from '@/lib/definitions';
+import { useState } from 'react';
+import { Skeleton } from './ui/skeleton';
+import { cn } from '@/lib/utils';
 
 type HeroCardCarouselProps = {
   posts: Post[];
 };
+
+function HeroCard({ post }: { post: Post }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <Card className="overflow-hidden border-none shadow-2xl rounded-xl">
+      <CardContent className="p-0 relative">
+        <div className="relative aspect-[9/16] w-full bg-muted">
+          {!isLoaded && <Skeleton className="absolute inset-0" />}
+          <Image
+            src={post.imageUrl}
+            alt={post.title}
+            fill
+            className={cn(
+              'object-cover transition-opacity duration-500',
+              isLoaded ? 'opacity-100' : 'opacity-0'
+            )}
+            data-ai-hint={post.imageHint}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            onLoad={() => setIsLoaded(true)}
+          />
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent space-y-3">
+          <Badge variant="secondary" className="font-semibold uppercase">
+            {post.category}
+          </Badge>
+          <h2 className="font-headline text-xs font-bold leading-tight text-primary-foreground">
+            {post.title}
+          </h2>
+          <Link href={`/posts/${post.id}`} className="inline-block font-semibold text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+            Continue Reading &gt;
+          </Link>
+        </div>
+
+      </CardContent>
+    </Card>
+  );
+}
+
 
 export function HeroCardCarousel({ posts }: HeroCardCarouselProps) {
   return (
@@ -31,33 +74,7 @@ export function HeroCardCarousel({ posts }: HeroCardCarouselProps) {
       <CarouselContent>
         {posts.map((post) => (
           <CarouselItem key={post.id}>
-            <Card className="overflow-hidden border-none shadow-2xl rounded-xl">
-              <CardContent className="p-0 relative">
-                <div className="relative aspect-[9/16] w-full">
-                  <Image
-                    src={post.imageUrl}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                    data-ai-hint={post.imageHint}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent space-y-3">
-                  <Badge variant="secondary" className="font-semibold uppercase">
-                    {post.category}
-                  </Badge>
-                  <h2 className="font-headline text-xs font-bold leading-tight text-primary-foreground">
-                    {post.title}
-                  </h2>
-                  <Link href={`/posts/${post.id}`} className="inline-block font-semibold text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                    Continue Reading &gt;
-                  </Link>
-                </div>
-
-              </CardContent>
-            </Card>
+            <HeroCard post={post} />
           </CarouselItem>
         ))}
       </CarouselContent>
