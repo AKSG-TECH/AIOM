@@ -84,7 +84,7 @@ export const posts: Post[] = [
     category: 'BOYS',
     imageUrl: postImage9?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtyk91Ds32sH75Rnc3rAhCAdyXQ9h8Vv_CmguDxC8uU76DUo00DUZfGZE9VCkkJlYyQQZWZrWtbuBu7A2qitqAcV1Pye_BBGouGNHOaYycXXusVL-b33Rqjpdt81lrmH7E9ZM37SlP8ICOwYMS-KeLvQ1kv69Kq3mq64odE529ZKAPvYj8MJXUdxEka7Zi/s1376/1000376785.jpg',
     imageHint: postImage9?.imageHint || 'boy posing suit',
-    content: 'A prompt to generate an image of a stylish young boy posing in a suit, showcasing a cool and confident attitude.',
+    content: 'A prompt to generate an image of a stylish young boy posing for a photo, showcasing a cool and confident attitude.',
   },
   {
     id: '10',
