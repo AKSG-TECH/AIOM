@@ -17,11 +17,15 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Copy } from 'lucide-react';
 import { Textarea } from '@/components/ui/textarea';
+import { useState } from 'react';
+import { Skeleton } from '@/components/ui/skeleton';
+import { cn } from '@/lib/utils';
 
 export default function PostPage() {
   const params = useParams<{ id: string }>();
   const post = posts.find((p) => p.id === params.id);
   const { toast } = useToast();
+  const [isLoaded, setIsLoaded] = useState(false);
 
   if (!post) {
     notFound();
@@ -45,13 +49,18 @@ export default function PostPage() {
             {post.title}
           </h1>
         </div>
-        <div className="relative aspect-[9/16] w-full overflow-hidden rounded-lg">
+        <div className="relative aspect-[9/16] w-full overflow-hidden rounded-lg bg-muted">
+          {!isLoaded && <Skeleton className="absolute inset-0 rounded-lg" />}
           <Image
             src={post.imageUrl}
             alt={post.title}
             fill
-            className="object-cover"
+            className={cn(
+              'object-cover transition-opacity duration-500',
+              isLoaded ? 'opacity-100' : 'opacity-0'
+            )}
             data-ai-hint={post.imageHint}
+            onLoad={() => setIsLoaded(true)}
           />
         </div>
 

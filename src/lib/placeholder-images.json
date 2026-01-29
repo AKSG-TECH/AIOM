@@ -8,9 +8,9 @@
     },
     {
       "id": "post-2",
-      "description": "A scenic view of summer meadows in the mountains.",
-      "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdW1tZXIlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzY5NTk5NzMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "summer landscape"
+      "description": "Stylish man in black posing against a stone wall",
+      "imageUrl": "https://storage.googleapis.com/res-blockcraft/image/622543c4-42b2-4d51-872f-53c0765c9247.jpg",
+      "imageHint": "man posing"
     },
     {
       "id": "post-3",
@@ -41,6 +41,24 @@
       "description": "Girl painting a colorful mural on a brick wall.",
       "imageUrl": "https://images.unsplash.com/photo-1615339685613-560830231713?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnaXJsJTIwcGFpbnRpbmd8ZW58MHx8fHwxNzY5NjA1MzU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "girl painting"
+    },
+    {
+      "id": "post-8",
+      "description": "A stylish young boy posing for a photo.",
+      "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGqQKU1KFWRRfkxYql8LI8Q5cqgVGWzDv33x-PGQP12ZQ4qBNm2o3ZMFTwA-Q4AxyCKrfNRSGOLpHkhoA4YJOYvje28l1QU1DNKIDzX2-GXnCWO_Gj5As5jEEOy5bxVML_z0dW97Rw-mvGvPSTzwKDFynXLkvT8X2O3AyzLzqY1y6BFLHQJqUGwuDGAqCS/s2752/1000376761.png",
+      "imageHint": "boy posing"
+    },
+    {
+      "id": "post-9",
+      "description": "A stylish young boy posing in a suit.",
+      "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtyk91Ds32sH75Rnc3rAhCAdyXQ9h8Vv_CmguDxC8uU76DUo00DUZfGZE9VCkkJlYyQQZWZrWtbuBu7A2qitqAcV1Pye_BBGouGNHOaYycXXusVL-b33Rqjpdt81lrmH7E9ZM37SlP8ICOwYMS-KeLvQ1kv69Kq3mq64odE529ZKAPvYj8MJXUdxEka7Zi/s1376/1000376785.jpg",
+      "imageHint": "boy posing suit"
+    },
+    {
+      "id": "post-10",
+      "description": "Stylish man in black leaning against a stone wall.",
+      "imageUrl": "https://storage.googleapis.com/res-blockcraft/image/622543c4-42b2-4d51-872f-53c0765c9247.jpg",
+      "imageHint": "man posing"
     }
   ]
 }
