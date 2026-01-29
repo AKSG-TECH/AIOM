@@ -10,6 +10,7 @@ const postImage5 = PlaceHolderImages.find(p => p.id === 'post-5');
 const postImage6 = PlaceHolderImages.find(p => p.id === 'post-6');
 const postImage7 = PlaceHolderImages.find(p => p.id === 'post-7');
 const postImage8 = PlaceHolderImages.find(p => p.id === 'post-8');
+const postImage9 = PlaceHolderImages.find(p => p.id === 'post-9');
 
 export const posts: Post[] = [
   {
@@ -22,11 +23,11 @@ export const posts: Post[] = [
   },
   {
     id: '2',
-    title: 'Exploring the Alps: A Journey Through Summer Meadows',
-    category: 'TRAVEL',
+    title: 'Stylish man in black posing against a stone wall',
+    category: 'BOYS',
     imageUrl: postImage2?.imageUrl || 'https://picsum.photos/seed/aisummer/400/600',
-    imageHint: postImage2?.imageHint || 'summer landscape',
-    content: 'Discover the breathtaking beauty of the Alpine summer, captured with advanced AI-powered photography techniques.',
+    imageHint: postImage2?.imageHint || 'man posing',
+    content: 'A prompt to generate an image of a stylish young man posing against an old stone wall, showcasing a cool and confident attitude.',
   },
   {
     id: '3',
@@ -75,5 +76,13 @@ export const posts: Post[] = [
     imageUrl: postImage8?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGqQKU1KFWRRfkxYql8LI8Q5cqgVGWzDv33x-PGQP12ZQ4qBNm2o3ZMFTwA-Q4AxyCKrfNRSGOLpHkhoA4YJOYvje28l1QU1DNKIDzX2-GXnCWO_Gj5As5jEEOy5bxVML_z0dW97Rw-mvGvPSTzwKDFynXLkvT8X2O3AyzLzqY1y6BFLHQJqUGwuDGAqCS/s2752/1000376761.png',
     imageHint: postImage8?.imageHint || 'boy posing',
     content: 'A prompt to generate an image of a stylish young boy posing for a photo, showcasing a cool and confident attitude.',
+  },
+  {
+    id: '9',
+    title: 'Stylish young boy posing in a suit',
+    category: 'BOYS',
+    imageUrl: postImage9?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtyk91Ds32sH75Rnc3rAhCAdyXQ9h8Vv_CmguDxC8uU76DUo00DUZfGZE9VCkkJlYyQQZWZrWtbuBu7A2qitqAcV1Pye_BBGouGNHOaYycXXusVL-b33Rqjpdt81lrmH7E9ZM37SlP8ICOwYMS-KeLvQ1kv69Kq3mq64odE529ZKAPvYj8MJXUdxEka7Zi/s1376/1000376785.jpg',
+    imageHint: postImage9?.imageHint || 'boy posing suit',
+    content: 'A prompt to generate an image of a stylish young boy posing in a suit, showcasing a cool and confident attitude.',
   }
 ];
