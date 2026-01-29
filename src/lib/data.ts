@@ -9,6 +9,7 @@ const postImage4 = PlaceHolderImages.find(p => p.id === 'post-4');
 const postImage5 = PlaceHolderImages.find(p => p.id === 'post-5');
 const postImage6 = PlaceHolderImages.find(p => p.id === 'post-6');
 const postImage7 = PlaceHolderImages.find(p => p.id === 'post-7');
+const postImage8 = PlaceHolderImages.find(p => p.id === 'post-8');
 
 export const posts: Post[] = [
   {
@@ -66,6 +67,14 @@ export const posts: Post[] = [
     imageUrl: postImage7?.imageUrl || 'https://picsum.photos/seed/girlpainting/400/600',
     imageHint: postImage7?.imageHint || 'girl painting',
     content: 'An image of a girl in overalls, joyfully painting a vibrant and colorful mural on an urban brick wall.',
+  },
+  {
+    id: '8',
+    title: 'Stylish young boy posing',
+    category: 'BOYS',
+    imageUrl: postImage8?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtyk91Ds32sH75Rnc3rAhCAdyXQ9h8Vv_CmguDxC8uU76DUo00DUZfGZE9VCkkJlYyQQZWZrWtbuBu7A2qitqAcV1Pye_BBGouGNHOaYycXXusVL-b33Rqjpdt81lrmH7E9ZM37SlP8ICOwYMS-KeLvQ1kv69Kq3mq64odE529ZKAPvYj8MJXUdxEka7Zi/s1376/1000376785.jpg',
+    imageHint: postImage8?.imageHint || 'boy posing',
+    content: 'A prompt to generate an image of a stylish young boy posing for a photo, showcasing a cool and confident attitude.',
   }
 ];
 
