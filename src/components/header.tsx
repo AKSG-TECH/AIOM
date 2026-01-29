@@ -26,7 +26,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         
-        <div className="flex flex-1 items-center justify-start">
+        <div className="flex flex-1 md:flex-none items-center justify-start">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold uppercase font-headline text-lg whitespace-nowrap">PROMPT AIOM</span>
           </Link>
@@ -40,7 +40,7 @@ export function Header() {
           ))}
         </nav>
         
-        <div className="flex flex-1 items-center justify-end space-x-2">
+        <div className="flex flex-1 md:flex-none items-center justify-end space-x-2">
           <div className="hidden md:flex items-center space-x-2">
             {socialLinks.map((link, index) => (
               <a key={index} href={link.href} className="text-foreground/60 hover:text-foreground/80">
