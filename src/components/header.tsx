@@ -10,6 +10,7 @@ export function Header() {
     { href: '/', label: 'HOME' },
     { href: '/category/boys', label: "BOYS" },
     { href: '/category/girls', label: "GIRLS" },
+    { href: '/category/favourites', label: 'FAVOURITES' },
     { href: '/privacy-policy', label: 'PRIVACY POLICY' },
     { href: '/contact-us', label: 'CONTACT US' },
   ];
