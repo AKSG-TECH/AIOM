@@ -2,9 +2,7 @@
 import type { Post } from '@/lib/definitions';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const postImage1 = PlaceHolderImages.find(p => p.id === 'post-1');
 const postImage2 = PlaceHolderImages.find(p => p.id === 'post-2');
-const postImage3 = PlaceHolderImages.find(p => p.id === 'post-3');
 const postImage4 = PlaceHolderImages.find(p => p.id === 'post-4');
 const postImage5 = PlaceHolderImages.find(p => p.id === 'post-5');
 const postImage6 = PlaceHolderImages.find(p => p.id === 'post-6');
@@ -15,28 +13,12 @@ const postImage10 = PlaceHolderImages.find(p => p.id === 'post-10');
 
 export const posts: Post[] = [
   {
-    id: '1',
-    title: 'Ultra-realistic creative winter portrait of a young Indian man',
-    category: "CREATIVE",
-    imageUrl: postImage1?.imageUrl || 'https://picsum.photos/seed/aiwinter/400/600',
-    imageHint: postImage1?.imageHint || 'winter portrait',
-    content: 'An in-depth look at creating stunningly realistic portraits with AI, focusing on winter aesthetics and cultural representation.',
-  },
-  {
     id: '2',
     title: 'Stylish man in black posing against a stone wall',
     category: 'BOYS',
     imageUrl: postImage2?.imageUrl || 'https://picsum.photos/seed/aisummer/400/600',
     imageHint: postImage2?.imageHint || 'man posing',
     content: 'A prompt to generate an image of a stylish young man posing against an old stone wall, showcasing a cool and confident attitude.',
-  },
-  {
-    id: '3',
-    title: 'Cyberpunk Revisited: Neon-Lit Streets of a Future Metropolis',
-    category: 'FUTURISM',
-    imageUrl: postImage3?.imageUrl || 'https://picsum.photos/seed/aicyberpunk/400/600',
-    imageHint: postImage3?.imageHint || 'city street',
-    content: 'A visual exploration of a cyberpunk city, with AI generating intricate details of a high-tech, dystopian future.',
   },
   {
     id: '4',
