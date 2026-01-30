@@ -17,7 +17,7 @@ export const posts: Post[] = [
     category: 'BOYS',
     imageUrl: postImage2?.imageUrl || 'https://picsum.photos/seed/aisummer/400/600',
     imageHint: postImage2?.imageHint || 'man posing',
-    content: 'A prompt to generate an image of a stylish young man posing against an old stone wall, showcasing a cool and confident attitude.',
+    content: 'A hyper-realistic, cinematic medium-full shot of a stylish young man leaning casually against a textured, ancient stone wall. He has a cool, confident expression with a subtle smirk, looking slightly away from the camera. He is wearing high-end modern streetwear: a fitted black leather jacket over a white t-shirt, dark denim jeans, and stylish boots. The lighting is golden hour sunlight filtering through nearby leaves, casting soft, dappled shadows on the wall and his face. The stone wall is weathered with moss and cracks, contrasting with his clean, modern look. High definition, 8k resolution, sharp focus on the face, shallow depth of field (bokeh background), professional photography style.',
   },
   {
     id: '4',
