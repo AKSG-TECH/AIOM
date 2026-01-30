@@ -16,6 +16,6 @@ export default function CategoryPage({ params }: { params: { slug:string } }) {
     notFound();
   }
 
-  // The actual logic is now in the client component
-  return <CategoryPageView params={params} />;
+  // Pass the slug directly to the client component
+  return <CategoryPageView slug={params.slug} />;
 }

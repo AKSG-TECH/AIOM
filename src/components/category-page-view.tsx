@@ -20,15 +20,15 @@ function PostCardSkeleton() {
 }
 
 
-export function CategoryPageView({ params }: { params: { slug: string } }) {
+export function CategoryPageView({ slug }: { slug: string }) {
   const [categoryPosts, setCategoryPosts] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const title = params.slug === 'favourites' ? 'Favourite Posts' : `${params.slug} Posts`;
+  const title = slug === 'favourites' ? 'Favourite Posts' : `${slug} Posts`;
 
   useEffect(() => {
     let postsToShow: Post[] = [];
-    if (params.slug === 'favourites') {
+    if (slug === 'favourites') {
       try {
         const favouriteIds: string[] = JSON.parse(localStorage.getItem('favouritePosts') || '[]');
         postsToShow = posts.filter(p => favouriteIds.includes(p.id));
@@ -37,11 +37,11 @@ export function CategoryPageView({ params }: { params: { slug: string } }) {
         postsToShow = [];
       }
     } else {
-      postsToShow = posts.filter((post) => post.category.toLowerCase() === params.slug);
+      postsToShow = posts.filter((post) => post.category.toLowerCase() === slug);
     }
     setCategoryPosts(postsToShow);
     setIsLoading(false);
-  }, [params.slug]);
+  }, [slug]);
 
   return (
     <div className="container mx-auto py-10 px-4">
@@ -71,7 +71,7 @@ export function CategoryPageView({ params }: { params: { slug: string } }) {
         <div className="flex flex-col items-center justify-center text-center min-h-[60vh]">
             <h1 className="text-3xl font-bold font-headline capitalize">{title}</h1>
             <p className="text-muted-foreground mt-4">
-                {params.slug === 'favourites' 
+                {slug === 'favourites' 
                     ? "You haven't added any posts to your favourites yet." 
                     : "No posts found in this category."}
             </p>
