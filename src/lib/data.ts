@@ -71,11 +71,11 @@ export const posts: Post[] = [
   },
   {
     id: '10',
-    title: 'Stylish Man in Black Leaning on Wall',
+    title: 'Stylish young boy posing',
     category: 'BOYS',
-    imageUrl: postImage10?.imageUrl || 'https://storage.googleapis.com/res-blockcraft/image/622543c4-42b2-4d51-872f-53c0765c9247.jpg',
-    imageHint: postImage10?.imageHint || 'man posing',
-    content: 'Generate an image of a confident man in a black outfit, casually leaning against an ancient, carved stone wall covered in ivy.',
+    imageUrl: postImage10?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjM8ohO2c8xzxwV9OaVqKpQW0OErpS39GAQ7GYi3kkKuFyftJBikD0SBlPZ_8wDlFzc3EZFy7G2TQrjxUCYBi4S_rabHg-09lD7tLEeuIKf5U0SApGXD9bjXsAIueUALOdNKvWaMbi0AYlfXGT3NmL4u18VEhjdkNGScoDWRasXquOhhpo9ijSwgfBEE4SB/s1536/1000378561.png',
+    imageHint: postImage10?.imageHint || 'boy posing',
+    content: 'A prompt to generate a photorealistic image of a stylish young boy posing.',
   },
   {
     id: '11',
