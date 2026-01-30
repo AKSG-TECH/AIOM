@@ -110,7 +110,7 @@ export function PostPageView({ post }: { post: Post }) {
 
       <div className="mt-16">
         <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 text-center">
-          Recent Posts
+          More Images Prompt
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {recentPosts.map((p) => (
