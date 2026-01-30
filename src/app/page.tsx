@@ -22,9 +22,16 @@ function PostCardSkeleton() {
 }
 
 export default function Home() {
-  const [shuffledPosts, setShuffledPosts] = useState<Post[]>([]);
+  const [displayPosts, setDisplayPosts] = useState<Post[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // This code runs only on the client, so localStorage is available.
+    const favouriteIds: string[] = JSON.parse(localStorage.getItem('favouritePosts') || '[]');
+    
+    const favouritePosts = allPosts.filter(p => favouriteIds.includes(p.id));
+    const nonFavouritePosts = allPosts.filter(p => !favouriteIds.includes(p.id));
+
     // Fisher-Yates shuffle algorithm
     const shuffle = (array: Post[]) => {
       let currentIndex = array.length,  randomIndex;
@@ -41,11 +48,13 @@ export default function Home() {
       }
       return array;
     }
-    // Clone the array to avoid mutating the original `allPosts`
-    setShuffledPosts(shuffle([...allPosts]));
+    
+    // Clone the array to avoid mutating the original
+    const shuffledNonFavourites = shuffle([...nonFavouritePosts]);
+    
+    setDisplayPosts([...favouritePosts, ...shuffledNonFavourites]);
+    setIsLoading(false);
   }, []);
-
-  const showSkeletons = shuffledPosts.length === 0;
 
   return (
     <>
@@ -54,9 +63,9 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-4">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[7px]">
-              {showSkeletons 
+              {isLoading 
                 ? allPosts.map((post) => <PostCardSkeleton key={post.id} />)
-                : shuffledPosts.map((post) => <PostCard key={post.id} post={post} />)
+                : displayPosts.map((post) => <PostCard key={post.id} post={post} />)
               }
             </div>
           </div>
