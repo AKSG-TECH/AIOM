@@ -40,8 +40,8 @@ export function PostCard({ post }: PostCardProps) {
                 alt={post.title}
                 fill
                 className={cn(
-                  'object-cover transition-opacity duration-500',
-                  isLoaded ? 'opacity-100' : 'opacity-0'
+                  'object-cover transition-all duration-500',
+                  isLoaded ? 'opacity-100 blur-0' : 'opacity-0 blur-md'
                 )}
                 data-ai-hint={post.imageHint}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -105,8 +105,8 @@ export function PostContent({ post }: { post: Post }) {
                 alt={post.title}
                 fill
                 className={cn(
-                'object-cover transition-opacity duration-500',
-                isLoaded ? 'opacity-100' : 'opacity-0'
+                'object-cover transition-all duration-500',
+                isLoaded ? 'opacity-100 blur-0' : 'opacity-0 blur-md'
                 )}
                 data-ai-hint={post.imageHint}
                 onLoad={() => setIsLoaded(true)}
