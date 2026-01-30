@@ -31,7 +31,7 @@ export const posts: Post[] = [
   {
     id: '5',
     title: 'Boy playing guitar in his room',
-    category: 'BOYS',
+    category: 'VIDEOS',
     imageUrl: postImage5?.imageUrl || 'https://picsum.photos/seed/boyguitar/400/600',
     imageHint: postImage5?.imageHint || 'boy guitar',
     content: 'Create an image of a teenage boy passionately playing an acoustic guitar in a room filled with posters and musical instruments.',
@@ -47,7 +47,7 @@ export const posts: Post[] = [
   {
     id: '7',
     title: 'Girl painting a colorful mural on a brick wall',
-    category: 'GIRLS',
+    category: 'VIDEOS',
     imageUrl: postImage7?.imageUrl || 'https://picsum.photos/seed/girlpainting/400/600',
     imageHint: postImage7?.imageHint || 'girl painting',
     content: 'An image of a girl in overalls, joyfully painting a vibrant and colorful mural on an urban brick wall.',
