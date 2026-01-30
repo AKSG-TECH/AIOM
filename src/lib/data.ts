@@ -10,6 +10,7 @@ const postImage7 = PlaceHolderImages.find(p => p.id === 'post-7');
 const postImage8 = PlaceHolderImages.find(p => p.id === 'post-8');
 const postImage9 = PlaceHolderImages.find(p => p.id === 'post-9');
 const postImage10 = PlaceHolderImages.find(p => p.id === 'post-10');
+const postImage11 = PlaceHolderImages.find(p => p.id === 'post-11');
 
 export const posts: Post[] = [
   {
@@ -75,5 +76,13 @@ export const posts: Post[] = [
     imageUrl: postImage10?.imageUrl || 'https://storage.googleapis.com/res-blockcraft/image/622543c4-42b2-4d51-872f-53c0765c9247.jpg',
     imageHint: postImage10?.imageHint || 'man posing',
     content: 'Generate an image of a confident man in a black outfit, casually leaning against an ancient, carved stone wall covered in ivy.',
+  },
+  {
+    id: '11',
+    title: 'Girl with headphones in a neon-lit room',
+    category: 'GIRLS',
+    imageUrl: postImage11?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5uGaw2ah9Hp7VH_mHu34OP8i9t9C0JZdGan7b6cMhSQH7RA4N_xuvfrGoZFgdGodONI9HGnJ9M9E2gMyWQ85z1fYM4M_keTT4oUURvgJm7mEGVUQ_0zzLDhPChqGzU0uUDs0shSZsSPaH9Ow0QZi3lAlnWfd0iGPyvCCdu1li0JxklzQCj8nYNDs7zhRg/s1168/1000378552.jpg',
+    imageHint: postImage11?.imageHint || 'girl headphones',
+    content: 'A prompt to generate an image of a girl wearing headphones, sitting in a room with neon lights, giving a futuristic or gaming vibe.',
   }
 ];
