@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 export function BlogSidebar() {
   const categories = [...new Set(posts.map(p => p.category))];
+  const allDisplayCategories = [...categories, 'Favourites'];
 
   return (
     <div className="space-y-8">
@@ -54,7 +55,7 @@ export function BlogSidebar() {
         </CardHeader>
         <CardContent>
           <ul className="space-y-2">
-            {categories.map(category => {
+            {allDisplayCategories.map(category => {
               const href = `/category/${category.toLowerCase()}`;
               return (
                 <li key={category}>
