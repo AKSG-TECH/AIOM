@@ -30,28 +30,12 @@ export const posts: Post[] = [
     content: 'A prompt that generates an image of a young boy in a superhero costume, looking out over a sprawling city from a high vantage point.',
   },
   {
-    id: '5',
-    title: 'Boy playing guitar in his room',
-    category: 'VIDEOS',
-    imageUrl: postImage5?.imageUrl || 'https://picsum.photos/seed/boyguitar/400/600',
-    imageHint: postImage5?.imageHint || 'boy guitar',
-    content: 'Create an image of a teenage boy passionately playing an acoustic guitar in a room filled with posters and musical instruments.',
-  },
-  {
     id: '6',
     title: 'Girl reading a book under a tree in a magical forest',
     category: 'GIRLS',
     imageUrl: postImage6?.imageUrl || 'https://picsum.photos/seed/girlreading/400/600',
     imageHint: postImage6?.imageHint || 'girl reading',
     content: 'Generate a whimsical image of a young girl with long hair reading a large, ancient book while sitting under a glowing, mystical tree.',
-  },
-  {
-    id: '7',
-    title: 'Girl painting a colorful mural on a brick wall',
-    category: 'VIDEOS',
-    imageUrl: postImage7?.imageUrl || 'https://picsum.photos/seed/girlpainting/400/600',
-    imageHint: postImage7?.imageHint || 'girl painting',
-    content: 'An image of a girl in overalls, joyfully painting a vibrant and colorful mural on an urban brick wall.',
   },
   {
     id: '8',

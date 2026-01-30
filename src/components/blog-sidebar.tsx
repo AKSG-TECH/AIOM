@@ -2,12 +2,10 @@
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { posts } from '@/lib/data';
 import Link from 'next/link';
 
 export function BlogSidebar() {
-  const categories = [...new Set(posts.map(p => p.category))];
-  const allDisplayCategories = [...categories, 'Favourites'];
+  const allDisplayCategories = ['BOYS', 'GIRLS', 'VIDEOS', 'Favourites'];
 
   return (
     <div className="space-y-8">

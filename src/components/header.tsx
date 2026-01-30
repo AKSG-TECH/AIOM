@@ -4,10 +4,9 @@ import { DarkModeToggle } from '@/components/dark-mode-toggle';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import Link from 'next/link';
-import { posts } from '@/lib/data';
 
 export function Header() {
-  const categories = [...new Set(posts.map(p => p.category))];
+  const categories = ['BOYS', 'GIRLS', 'VIDEOS'];
 
   const mainNavLinks = [
     { href: '/', label: 'HOME' },

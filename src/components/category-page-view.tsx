@@ -1,3 +1,4 @@
+
 'use client';
 
 import { PostCard } from "@/components/post-card";
@@ -72,7 +73,9 @@ export function CategoryPageView({ slug }: { slug: string }) {
             <h1 className="text-3xl font-bold font-headline capitalize">{title}</h1>
             <p className="text-muted-foreground mt-4">
                 {slug === 'favourites' 
-                    ? "You haven't added any posts to your favourites yet." 
+                    ? "You haven't added any posts to your favourites yet."
+                    : slug === 'videos'
+                    ? "Coming Soon"
                     : "No posts found in this category."}
             </p>
         </div>

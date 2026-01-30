@@ -15,8 +15,7 @@ import { Home, LayoutGrid, Video } from 'lucide-react';
 import type { Post } from '@/lib/definitions';
 
 export function StickyNav({ posts }: { posts: Post[] }) {
-  const categories = [...new Set(posts.map(p => p.category))];
-  const allCategories = [...categories, 'Favourites'];
+  const allCategories = ['BOYS', 'GIRLS', 'VIDEOS', 'Favourites'];
 
   return (
     <nav className="sticky bottom-0 z-50 w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:hidden">
