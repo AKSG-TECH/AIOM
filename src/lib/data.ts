@@ -9,6 +9,7 @@ const postImage8 = PlaceHolderImages.find(p => p.id === 'post-8');
 const postImage9 = PlaceHolderImages.find(p => p.id === 'post-9');
 const postImage10 = PlaceHolderImages.find(p => p.id === 'post-10');
 const postImage11 = PlaceHolderImages.find(p => p.id === 'post-11');
+const postImage12 = PlaceHolderImages.find(p => p.id === 'post-12');
 
 export const posts: Post[] = [
   {
@@ -56,7 +57,7 @@ export const posts: Post[] = [
     title: 'Man in Black Leather Jacket Collage Poster',
     category: 'BOYS',
     imageUrl: postImage10?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjM8ohO2c8xzxwV9OaVqKpQW0OErpS39GAQ7GYi3kkKuFyftJBikD0SBlPZ_8wDlFzc3EZFy7G2TQrjxUCYBi4S_rabHg-09lD7tLEeuIKf5U0SApGXD9bjXsAIueUALOdNKvWaMbi0AYlfXGT3NmL4u18VEhjdkNGScoDWRasXquOhhpo9ijSwgfBEE4SB/s1536/1000378561.png',
-    imageHint: 'man poster',
+    imageHint: postImage10?.imageHint || 'man poster',
     content: "Ultra-realistic 4K collage-style photo poster of a man wearing a black leather jacket, white tee, and jeans with white shoes. Multiple creative shots blended together one close-up portrait, one full-body pose, and one side profile all set against a dark, moody background with glowing abstract shapes and shadows.\n\n\nStylish cinematic poster vibe with dramatic lighting and high contrast.",
   },
   {
@@ -66,5 +67,13 @@ export const posts: Post[] = [
     imageUrl: postImage11?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5uGaw2ah9Hp7VH_mHu34OP8i9t9C0JZdGan7b6cMhSQH7RA4N_xuvfrGoZFgdGodONI9HGnJ9M9E2gMyWQ85z1fYM4M_keTT4oUURvgJm7mEGVUQ_0zzLDhPChqGzU0uUDs0shSZsSPaH9Ow0QZi3lAlnWfd0iGPyvCCdu1li0JxklzQCj8nYNDs7zhRg/s1168/1000378552.jpg',
     imageHint: postImage11?.imageHint || 'girl saree',
     content: "Create A beautiful Indian girl dressed in a traditional decent hot light green net saree with bollywood style with intricate golden embroidery blouse.hairs are open and gajra tucked in her hair. She is wear earrings, bangles she taking a mirror selfie completely 100% unchanged face and cloth.  full body picture.",
+  },
+  {
+    id: '12',
+    title: 'Indian Woman in a Blue Gown',
+    category: 'GIRLS',
+    imageUrl: postImage12?.imageUrl || 'https://picsum.photos/seed/womangown/400/600',
+    imageHint: postImage12?.imageHint || 'woman gown',
+    content: "CONVERT, 4K HD REALISTIC, A STUNNING PORTRAIT OF A YOUNG INDIAN WOMAN WITH LONG, BRAUN HAIR. SHE IS WEARING A BEAUTIFUL FITTED BLUE COLOR SOFT PETAL FABRIC FLORTACH LONG GOWN UPPERCASE, MACHING CHUNRI MACHING HEEL FULLBODY PICTURE. CAMERA LOOKS. A DIAMOND BRACELET ON LEFT WRIST AND A BEAUTIFUL WATCH ON RIGHT WRIST. HER HAIR IS MESSY BUN WITH MATCHING ACCESSORIES. AND HANGING LITTLE DIAMOND EARRINGS AND THIN NECKLACE WITH BEAUTIFUL RUBY PENDANT ON IT. SHE IS LOOKING SLIGHTLY HOT STYLE. I WANT EXACT WOMAN SAME FACE AS, I UPLOADED NO ALTERATION 100% SAME.\n\nRATIO 9:16",
   }
 ];
