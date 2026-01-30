@@ -1,7 +1,7 @@
 'use client';
 
 import { posts } from '@/lib/data';
-import { notFound, useParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -21,8 +21,13 @@ import { useState } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 
-export default function PostPage() {
-  const params = useParams<{ id: string }>();
+export async function generateStaticParams() {
+  return posts.map((post) => ({
+    id: post.id,
+  }));
+}
+
+export default function PostPage({ params }: { params: { id: string } }) {
   const post = posts.find((p) => p.id === params.id);
   const { toast } = useToast();
   const [isLoaded, setIsLoaded] = useState(false);
