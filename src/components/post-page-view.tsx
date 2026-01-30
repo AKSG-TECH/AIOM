@@ -83,20 +83,24 @@ export function PostPageView({ post }: { post: Post }) {
                   />
                 </div>
                 <DialogFooter>
-                  <Button onClick={handleCopy}>
-                    <Copy className="mr-2 h-4 w-4" />
-                    Copy
-                  </Button>
-                  <Button asChild>
-                    <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">
-                      Gemini
-                    </a>
-                  </Button>
-                  <Button asChild>
-                    <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">
-                      ChatGPT
-                    </a>
-                  </Button>
+                  <div className="flex w-full flex-col gap-2">
+                    <Button onClick={handleCopy}>
+                      <Copy className="mr-2 h-4 w-4" />
+                      Copy
+                    </Button>
+                    <div className="grid grid-cols-2 gap-2">
+                      <Button asChild>
+                        <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">
+                          Gemini
+                        </a>
+                      </Button>
+                      <Button asChild>
+                        <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">
+                          ChatGPT
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
                 </DialogFooter>
               </DialogContent>
             </Dialog>
