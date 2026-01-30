@@ -71,7 +71,7 @@ export function PostPageView({ post }: { post: Post }) {
                 <DialogHeader>
                   <DialogTitle>Prompt</DialogTitle>
                   <DialogDescription>
-                    WELCOME TO AIOM
+                    Your prompt is ready to use go on any image Generator website like GEMINI, ChatGPT or Grok Ai to generate your image.
                   </DialogDescription>
                 </DialogHeader>
                 <div className="my-4">
