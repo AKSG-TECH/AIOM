@@ -5,13 +5,14 @@ import { CategoryPageView } from "@/components/category-page-view";
 export async function generateStaticParams() {
   const categories = [...new Set(posts.map((p) => p.category.toLowerCase()))];
   categories.push('favourites');
+  categories.push('videos');
   return categories.map((slug) => ({
     slug,
   }));
 }
 
 export default function CategoryPage({ params }: { params: { slug:string } }) {
-  const allCategories = [...new Set(posts.map(p => p.category.toLowerCase())), 'favourites'];
+  const allCategories = [...new Set(posts.map(p => p.category.toLowerCase())), 'favourites', 'videos'];
   if (!allCategories.includes(params.slug)) {
     notFound();
   }
