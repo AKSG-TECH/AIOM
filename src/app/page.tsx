@@ -26,12 +26,6 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // This code runs only on the client, so localStorage is available.
-    const favouriteIds: string[] = JSON.parse(localStorage.getItem('favouritePosts') || '[]');
-    
-    const favouritePosts = allPosts.filter(p => favouriteIds.includes(p.id));
-    const nonFavouritePosts = allPosts.filter(p => !favouriteIds.includes(p.id));
-
     // Fisher-Yates shuffle algorithm
     const shuffle = (array: Post[]) => {
       let currentIndex = array.length,  randomIndex;
@@ -49,10 +43,10 @@ export default function Home() {
       return array;
     }
     
-    // Clone the array to avoid mutating the original
-    const shuffledNonFavourites = shuffle([...nonFavouritePosts]);
+    // Clone the array to avoid mutating the original and shuffle it
+    const shuffledPosts = shuffle([...allPosts]);
     
-    setDisplayPosts([...favouritePosts, ...shuffledNonFavourites]);
+    setDisplayPosts(shuffledPosts);
     setIsLoading(false);
   }, []);
 
