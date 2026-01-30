@@ -2,6 +2,13 @@ import { PostCard } from "@/components/post-card";
 import { posts } from "@/lib/data";
 import { notFound } from "next/navigation";
 
+export async function generateStaticParams() {
+  const categories = [...new Set(posts.map((post) => post.category.toLowerCase()))];
+  return categories.map((category) => ({
+    slug: category,
+  }));
+}
+
 export default function CategoryPage({ params }: { params: { slug: string } }) {
   const categoryPosts = posts.filter((post) => post.category.toLowerCase() === params.slug);
 
