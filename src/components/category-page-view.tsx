@@ -1,4 +1,3 @@
-
 'use client';
 
 import { PostCard } from "@/components/post-card";
@@ -25,7 +24,14 @@ export function CategoryPageView({ slug }: { slug: string }) {
   const [categoryPosts, setCategoryPosts] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const title = slug === 'favourites' ? 'Favourite Posts' : `${slug} Posts`;
+  let title;
+  if (slug === 'favourites') {
+    title = 'Favourite Posts';
+  } else if (slug === 'videos') {
+    title = 'Video Prompt';
+  } else {
+    title = `${slug} Posts`;
+  }
 
   useEffect(() => {
     let postsToShow: Post[] = [];
@@ -51,7 +57,7 @@ export function CategoryPageView({ slug }: { slug: string }) {
           <h1 className="text-3xl md:text-4xl font-bold font-headline mb-8 text-center capitalize">
             {title}
           </h1>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[7px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
             {Array.from({ length: 8 }).map((_, i) => (
               <PostCardSkeleton key={i} />
             ))}
@@ -62,7 +68,7 @@ export function CategoryPageView({ slug }: { slug: string }) {
           <h1 className="text-3xl md:text-4xl font-bold font-headline mb-8 text-center capitalize">
             {title}
           </h1>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[7px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
             {categoryPosts.map((post) => (
               <PostCard key={post.id} post={post} />
             ))}
