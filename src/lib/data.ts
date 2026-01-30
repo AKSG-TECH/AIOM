@@ -4,9 +4,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const postImage2 = PlaceHolderImages.find(p => p.id === 'post-2');
 const postImage4 = PlaceHolderImages.find(p => p.id === 'post-4');
-const postImage5 = PlaceHolderImages.find(p => p.id === 'post-5');
 const postImage6 = PlaceHolderImages.find(p => p.id === 'post-6');
-const postImage7 = PlaceHolderImages.find(p => p.id === 'post-7');
 const postImage8 = PlaceHolderImages.find(p => p.id === 'post-8');
 const postImage9 = PlaceHolderImages.find(p => p.id === 'post-9');
 const postImage10 = PlaceHolderImages.find(p => p.id === 'post-10');
@@ -55,18 +53,18 @@ export const posts: Post[] = [
   },
   {
     id: '10',
-    title: 'Stylish young boy posing',
+    title: 'Man in Black Leather Jacket Collage Poster',
     category: 'BOYS',
     imageUrl: postImage10?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjM8ohO2c8xzxwV9OaVqKpQW0OErpS39GAQ7GYi3kkKuFyftJBikD0SBlPZ_8wDlFzc3EZFy7G2TQrjxUCYBi4S_rabHg-09lD7tLEeuIKf5U0SApGXD9bjXsAIueUALOdNKvWaMbi0AYlfXGT3NmL4u18VEhjdkNGScoDWRasXquOhhpo9ijSwgfBEE4SB/s1536/1000378561.png',
-    imageHint: postImage10?.imageHint || 'boy posing',
-    content: 'A prompt to generate a photorealistic image of a stylish young boy posing.',
+    imageHint: 'man poster',
+    content: "Ultra-realistic 4K collage-style photo poster of a man wearing a black leather jacket, white tee, and jeans with white shoes. Multiple creative shots blended together one close-up portrait, one full-body pose, and one side profile all set against a dark, moody background with glowing abstract shapes and shadows.\n\n\nStylish cinematic poster vibe with dramatic lighting and high contrast.",
   },
   {
     id: '11',
-    title: 'Girl with headphones in a neon-lit room',
+    title: 'Indian Girl in Green Saree',
     category: 'GIRLS',
     imageUrl: postImage11?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5uGaw2ah9Hp7VH_mHu34OP8i9t9C0JZdGan7b6cMhSQH7RA4N_xuvfrGoZFgdGodONI9HGnJ9M9E2gMyWQ85z1fYM4M_keTT4oUURvgJm7mEGVUQ_0zzLDhPChqGzU0uUDs0shSZsSPaH9Ow0QZi3lAlnWfd0iGPyvCCdu1li0JxklzQCj8nYNDs7zhRg/s1168/1000378552.jpg',
-    imageHint: postImage11?.imageHint || 'girl headphones',
-    content: 'A prompt to generate an image of a girl wearing headphones, sitting in a room with neon lights, giving a futuristic or gaming vibe.',
+    imageHint: postImage11?.imageHint || 'girl saree',
+    content: "Create A beautiful Indian girl dressed in a traditional decent hot light green net saree with bollywood style with intricate golden embroidery blouse.hairs are open and gajra tucked in her hair. She is wear earrings, bangles she taking a mirror selfie completely 100% unchanged face and cloth.  full body picture.",
   }
 ];
