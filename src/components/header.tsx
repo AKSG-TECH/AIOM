@@ -4,16 +4,27 @@ import { DarkModeToggle } from '@/components/dark-mode-toggle';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import Link from 'next/link';
+import { posts } from '@/lib/data';
 
 export function Header() {
-  const navLinks = [
+  const categories = [...new Set(posts.map(p => p.category))];
+
+  const mainNavLinks = [
     { href: '/', label: 'HOME' },
-    { href: '/category/boys', label: "BOYS" },
-    { href: '/category/girls', label: "GIRLS" },
+    ...categories.map(category => ({
+      href: `/category/${category.toLowerCase()}`,
+      label: category.toUpperCase(),
+    })),
     { href: '/category/favourites', label: 'FAVOURITES' },
+  ];
+  
+  const otherNavLinks = [
     { href: '/privacy-policy', label: 'PRIVACY POLICY' },
     { href: '/contact-us', label: 'CONTACT US' },
   ];
+
+  const navLinks = [...mainNavLinks, ...otherNavLinks];
+
 
   const socialLinks = [
     { href: '#', icon: <Facebook size={18} /> },
