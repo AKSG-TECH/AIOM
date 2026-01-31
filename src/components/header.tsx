@@ -6,13 +6,24 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose 
 import Link from 'next/link';
 
 export function Header() {
-  const navLinks = [
+  const categories = ['BOYS', 'GIRLS', 'VIDEOS'];
+
+  const mainNavLinks = [
     { href: '/', label: 'HOME' },
-    { href: '/category/boys', label: "BOYS" },
-    { href: '/category/girls', label: "GIRLS" },
+    ...categories.map(category => ({
+      href: `/category/${category.toLowerCase()}`,
+      label: category.toUpperCase(),
+    })),
+    { href: '/category/favourites', label: 'FAVOURITES' },
+  ];
+  
+  const otherNavLinks = [
     { href: '/privacy-policy', label: 'PRIVACY POLICY' },
     { href: '/contact-us', label: 'CONTACT US' },
   ];
+
+  const navLinks = [...mainNavLinks, ...otherNavLinks];
+
 
   const socialLinks = [
     { href: '#', icon: <Facebook size={18} /> },

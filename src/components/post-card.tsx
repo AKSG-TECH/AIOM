@@ -5,22 +5,10 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import type { Post } from '@/lib/definitions';
-import { User, Copy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Skeleton } from './ui/skeleton';
 import { cn } from '@/lib/utils';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-  DialogFooter,
-} from "@/components/ui/dialog";
-import { useToast } from "@/hooks/use-toast";
-import { Textarea } from '@/components/ui/textarea';
 
 type PostCardProps = {
   post: Post;
@@ -28,6 +16,52 @@ type PostCardProps = {
 
 export function PostCard({ post }: PostCardProps) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isFavourite, setIsFavourite] = useState(false);
+  const { toast } = useToast();
+
+  useEffect(() => {
+    try {
+      const favourites: string[] = JSON.parse(localStorage.getItem('favouritePosts') || '[]');
+      setIsFavourite(favourites.includes(post.id));
+    } catch (error) {
+      console.error("Failed to parse favourites from localStorage", error);
+      setIsFavourite(false);
+    }
+  }, [post.id]);
+
+  const handleFavouriteToggle = () => {
+    try {
+      const favourites: string[] = JSON.parse(localStorage.getItem('favouritePosts') || '[]');
+      let updatedFavourites: string[];
+      
+      const isCurrentlyFavourite = favourites.includes(post.id);
+
+      if (isCurrentlyFavourite) {
+        updatedFavourites = favourites.filter(id => id !== post.id);
+        toast({
+          title: "Removed from Favourites",
+          description: `"${post.title}" has been removed from your favourites.`,
+        });
+      } else {
+        updatedFavourites = [...favourites, post.id];
+        toast({
+          title: "Saved to Favourites",
+          description: `"${post.title}" has been saved to your favourites.`,
+        });
+      }
+      
+      localStorage.setItem('favouritePosts', JSON.stringify(updatedFavourites));
+      setIsFavourite(!isCurrentlyFavourite);
+    } catch (error) {
+       console.error("Failed to update favourites in localStorage", error);
+       toast({
+          variant: "destructive",
+          title: "Uh oh! Something went wrong.",
+          description: "Could not update your favourites.",
+       });
+    }
+  };
+
 
   return (
     <Card className="overflow-hidden shadow-lg rounded-xl transition-shadow hover:shadow-2xl">
@@ -59,9 +93,12 @@ export function PostCard({ post }: PostCardProps) {
                 {post.title}
               </Link>
             </h2>
-            <div className="w-full">
-              <Button asChild className="w-full">
+            <div className="flex items-center gap-1 w-full">
+              <Button asChild className="flex-grow">
                 <Link href={`/posts/${post.id}`}>Show prompt</Link>
+              </Button>
+              <Button variant="outline" size="icon" onClick={handleFavouriteToggle} aria-label="Save favourite">
+                <Heart className={cn("transition-colors", isFavourite ? "fill-destructive text-destructive" : "")} />
               </Button>
             </div>
             <div className="flex items-center text-xs text-muted-foreground justify-center">

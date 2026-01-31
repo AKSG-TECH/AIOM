@@ -2,41 +2,23 @@
 import type { Post } from '@/lib/definitions';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const postImage1 = PlaceHolderImages.find(p => p.id === 'post-1');
 const postImage2 = PlaceHolderImages.find(p => p.id === 'post-2');
-const postImage3 = PlaceHolderImages.find(p => p.id === 'post-3');
 const postImage4 = PlaceHolderImages.find(p => p.id === 'post-4');
-const postImage5 = PlaceHolderImages.find(p => p.id === 'post-5');
 const postImage6 = PlaceHolderImages.find(p => p.id === 'post-6');
-const postImage7 = PlaceHolderImages.find(p => p.id === 'post-7');
 const postImage8 = PlaceHolderImages.find(p => p.id === 'post-8');
 const postImage9 = PlaceHolderImages.find(p => p.id === 'post-9');
 const postImage10 = PlaceHolderImages.find(p => p.id === 'post-10');
+const postImage11 = PlaceHolderImages.find(p => p.id === 'post-11');
+const postImage12 = PlaceHolderImages.find(p => p.id === 'post-12');
 
 export const posts: Post[] = [
-  {
-    id: '1',
-    title: 'Ultra-realistic creative winter portrait of a young Indian man',
-    category: "CREATIVE",
-    imageUrl: postImage1?.imageUrl || 'https://picsum.photos/seed/aiwinter/400/600',
-    imageHint: postImage1?.imageHint || 'winter portrait',
-    content: 'An in-depth look at creating stunningly realistic portraits with AI, focusing on winter aesthetics and cultural representation.',
-  },
   {
     id: '2',
     title: 'Stylish man in black posing against a stone wall',
     category: 'BOYS',
     imageUrl: postImage2?.imageUrl || 'https://picsum.photos/seed/aisummer/400/600',
     imageHint: postImage2?.imageHint || 'man posing',
-    content: 'A prompt to generate an image of a stylish young man posing against an old stone wall, showcasing a cool and confident attitude.',
-  },
-  {
-    id: '3',
-    title: 'Cyberpunk Revisited: Neon-Lit Streets of a Future Metropolis',
-    category: 'FUTURISM',
-    imageUrl: postImage3?.imageUrl || 'https://picsum.photos/seed/aicyberpunk/400/600',
-    imageHint: postImage3?.imageHint || 'city street',
-    content: 'A visual exploration of a cyberpunk city, with AI generating intricate details of a high-tech, dystopian future.',
+    content: 'A hyper-realistic, cinematic medium-full shot of a stylish young man leaning casually against a textured, ancient stone wall. He has a cool, confident expression with a subtle smirk, looking slightly away from the camera. He is wearing high-end modern streetwear: a fitted black leather jacket over a white t-shirt, dark denim jeans, and stylish boots. The lighting is golden hour sunlight filtering through nearby leaves, casting soft, dappled shadows on the wall and his face. The stone wall is weathered with moss and cracks, contrasting with his clean, modern look. High definition, 8k resolution, sharp focus on the face, shallow depth of field (bokeh background), professional photography style.',
   },
   {
     id: '4',
@@ -47,28 +29,12 @@ export const posts: Post[] = [
     content: 'A prompt that generates an image of a young boy in a superhero costume, looking out over a sprawling city from a high vantage point.',
   },
   {
-    id: '5',
-    title: 'Boy playing guitar in his room',
-    category: 'BOYS',
-    imageUrl: postImage5?.imageUrl || 'https://picsum.photos/seed/boyguitar/400/600',
-    imageHint: postImage5?.imageHint || 'boy guitar',
-    content: 'Create an image of a teenage boy passionately playing an acoustic guitar in a room filled with posters and musical instruments.',
-  },
-  {
     id: '6',
     title: 'Girl reading a book under a tree in a magical forest',
     category: 'GIRLS',
     imageUrl: postImage6?.imageUrl || 'https://picsum.photos/seed/girlreading/400/600',
     imageHint: postImage6?.imageHint || 'girl reading',
     content: 'Generate a whimsical image of a young girl with long hair reading a large, ancient book while sitting under a glowing, mystical tree.',
-  },
-  {
-    id: '7',
-    title: 'Girl painting a colorful mural on a brick wall',
-    category: 'GIRLS',
-    imageUrl: postImage7?.imageUrl || 'https://picsum.photos/seed/girlpainting/400/600',
-    imageHint: postImage7?.imageHint || 'girl painting',
-    content: 'An image of a girl in overalls, joyfully painting a vibrant and colorful mural on an urban brick wall.',
   },
   {
     id: '8',
@@ -88,10 +54,26 @@ export const posts: Post[] = [
   },
   {
     id: '10',
-    title: 'Stylish Man in Black Leaning on Wall',
+    title: 'Man in Black Leather Jacket Collage Poster',
     category: 'BOYS',
-    imageUrl: postImage10?.imageUrl || 'https://storage.googleapis.com/res-blockcraft/image/622543c4-42b2-4d51-872f-53c0765c9247.jpg',
-    imageHint: postImage10?.imageHint || 'man posing',
-    content: 'Generate an image of a confident man in a black outfit, casually leaning against an ancient, carved stone wall covered in ivy.',
+    imageUrl: postImage10?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjM8ohO2c8xzxwV9OaVqKpQW0OErpS39GAQ7GYi3kkKuFyftJBikD0SBlPZ_8wDlFzc3EZFy7G2TQrjxUCYBi4S_rabHg-09lD7tLEeuIKf5U0SApGXD9bjXsAIueUALOdNKvWaMbi0AYlfXGT3NmL4u18VEhjdkNGScoDWRasXquOhhpo9ijSwgfBEE4SB/s1536/1000378561.png',
+    imageHint: postImage10?.imageHint || 'man poster',
+    content: "Ultra-realistic 4K collage-style photo poster of a man wearing a black leather jacket, white tee, and jeans with white shoes. Multiple creative shots blended together one close-up portrait, one full-body pose, and one side profile all set against a dark, moody background with glowing abstract shapes and shadows.\n\n\nStylish cinematic poster vibe with dramatic lighting and high contrast.",
+  },
+  {
+    id: '11',
+    title: 'Indian Girl in Green Saree',
+    category: 'GIRLS',
+    imageUrl: postImage11?.imageUrl || 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5uGaw2ah9Hp7VH_mHu34OP8i9t9C0JZdGan7b6cMhSQH7RA4N_xuvfrGoZFgdGodONI9HGnJ9M9E2gMyWQ85z1fYM4M_keTT4oUURvgJm7mEGVUQ_0zzLDhPChqGzU0uUDs0shSZsSPaH9Ow0QZi3lAlnWfd0iGPyvCCdu1li0JxklzQCj8nYNDs7zhRg/s1168/1000378552.jpg',
+    imageHint: postImage11?.imageHint || 'girl saree',
+    content: "Create A beautiful Indian girl dressed in a traditional decent hot light green net saree with bollywood style with intricate golden embroidery blouse.hairs are open and gajra tucked in her hair. She is wear earrings, bangles she taking a mirror selfie completely 100% unchanged face and cloth.  full body picture.",
+  },
+  {
+    id: '12',
+    title: 'Indian Woman in a Blue Gown',
+    category: 'GIRLS',
+    imageUrl: postImage12?.imageUrl || 'https://picsum.photos/seed/womangown/400/600',
+    imageHint: postImage12?.imageHint || 'woman gown',
+    content: "CONVERT, 4K HD REALISTIC, A STUNNING PORTRAIT OF A YOUNG INDIAN WOMAN WITH LONG, BRAUN HAIR. SHE IS WEARING A BEAUTIFUL FITTED BLUE COLOR SOFT PETAL FABRIC FLORTACH LONG GOWN UPPERCASE, MACHING CHUNRI MACHING HEEL FULLBODY PICTURE. CAMERA LOOKS. A DIAMOND BRACELET ON LEFT WRIST AND A BEAUTIFUL WATCH ON RIGHT WRIST. HER HAIR IS MESSY BUN WITH MATCHING ACCESSORIES. AND HANGING LITTLE DIAMOND EARRINGS AND THIN NECKLACE WITH BEAUTIFUL RUBY PENDANT ON IT. SHE IS LOOKING SLIGHTLY HOT STYLE. I WANT EXACT WOMAN SAME FACE AS, I UPLOADED NO ALTERATION 100% SAME.\n\nRATIO 9:16",
   }
 ];
