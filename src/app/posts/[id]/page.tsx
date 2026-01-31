@@ -1,6 +1,6 @@
 import { posts } from '@/lib/data';
 import { notFound } from 'next/navigation';
-import { PostPageView } from '@/components/post-page-view';
+
 
 export async function generateStaticParams() {
   return posts.map((post) => ({
@@ -15,5 +15,3 @@ export default function PostPage({ params }: { params: { id: string } }) {
     notFound();
   }
 
-  return <PostPageView post={post} />;
-}
